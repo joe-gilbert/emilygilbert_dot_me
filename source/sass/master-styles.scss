@@ -1,0 +1,237 @@
+/*
+  Theme Name: EmilyGilbert.me
+  Author: Joe Gilbert
+  Author URI: JoeGilbert.me
+  Description: This is Emily Gilbert's photography portfolio site.
+  Version: 1.0
+*/
+
+/**
+  * Table of Contents
+  *
+  * 01. - Necessary Standard Imports
+  * 02. - Normalize
+  * 03. - Generic Styles, Structure & Utilities
+  * 04. - Page Specific Styles
+  *
+  */
+
+/* 01 - Necessary Standard Imports */
+@import 'partials/variables';
+@import 'partials/mixins';
+
+
+/* 02 - Normalize */
+@import 'partials/normalize';
+
+
+/* 03 - Generic Styles, Structure & Utilities */
+@import 'partials/generic-styles-structure-utilities';
+
+
+/* 04 - Page Specific Styles */
+.category-lp, .error-404-lp, .homepage, .search-results-lp{
+  .recent-post{
+    .single-post{
+      margin-bottom:2em;
+      text-align:center;
+
+      .posted-date{
+        color:$body-copy-gray;
+        font-size:0.8em;
+      }
+
+      .post-image{
+        height:0;
+        margin-bottom:1em;
+        overflow:hidden;
+        padding-bottom:67%;
+
+        img{
+          height:auto;
+          opacity:1;
+          width:100%;
+        }
+      } /* .post-image */
+
+      .post-info{
+        &:hover{
+          .post-image{opacity:.85;}
+        }
+      } /* .post-info */
+
+      .post-title{
+        color:$body-copy-black;
+        font-size:0.85em;
+        margin-bottom:0.2em;
+        text-transform:uppercase;
+      }
+
+      @media only screen and (min-width:40em){
+        margin-bottom:4em;
+        float:left;
+      }
+
+
+      @media only screen and (min-width:40em) and (max-width:59em){
+        width:47%;
+        margin-right:6%;
+
+        &:nth-of-type(2n){margin-right:0;}
+      }
+
+      @media (min-width:60em){
+        width:30%;
+        margin-right:5%;
+
+        &:nth-of-type(3n){margin-right:0;}
+      }
+
+    } /* .single-post */
+  } /* .recent-post */
+} /* .error-404-lp, .homepage, .search-results-lp */
+
+.error-404-lp, .search-results-lp{
+  .search-query-container{margin-bottom:4em;}
+  .title{margin-bottom:0.3em;}
+} /* .error-404-lp, .search-results-lp */
+
+.category-lp{
+  .title{margin-bottom:1em;}
+} /* .category-lp */
+
+.homepage{
+  .engaging-recent-photo-gallery-slider{
+    margin:0 -5vw 3em;
+
+    @media only screen and (min-width:$site-max-width){
+      margin:0 calc(50% - 50vw) 5em;
+    }
+
+    .gallery-slider{
+      list-style-type:none;
+      margin:0;
+      overflow:hidden;
+      padding:0;
+      position:relative;
+
+      li{
+        display:none;
+        left:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        width:100%;
+
+        &:first-child {
+          display:block;
+          float:left;
+          position:relative;
+        }
+      }
+
+      img{
+        border:0;
+        display:block;
+        height:auto;
+        float:left;
+        width:100%;
+      }
+
+    } /* .gallery-slider */
+  } /* .engaging-recent-photo-gallery-slider */
+} /* .homepage */
+
+.about-lp{
+
+  .self-portrait, .profile, .contact{
+    margin-bottom:3em;
+  }
+
+  .profile{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:$site-medium-width;
+
+    @media screen and (min-width:60em){
+      @include text-columns(2);
+      @include column-gap(4em);
+    }
+  }
+
+  .self-portrait{
+    text-align:center;
+
+    img{
+      height:auto;
+      max-width:960px;
+      width:100%;
+    }
+  } /* .self-portrait */
+
+  .social-contacts{
+    text-align:center;
+
+    svg{
+      height:auto;
+      width:40px;
+      fill:$body-emphasis-color;
+    }
+
+    .social-icon{
+      margin-right:0.5em;
+      &:hover{
+        svg{
+          background:$body-emphasis-color;
+          fill:#FFF;
+        }
+      }
+      &:last-child{margin-right:0;}
+    } /* .social-icon */
+  } /* .social-contacts */
+} /* .about-lp */
+
+.single-post{
+
+  .post-content{
+    p{margin-bottom:2em;}
+  }
+
+  .post-header{
+    margin:0 -5vw 3em;
+
+    @media only screen and (min-width:$site-max-width){
+      margin:0 calc(50% - 50vw) 3em;
+    }
+
+    .engaging-header-image{
+      height:auto;
+      width:100%;
+    }
+  }
+
+  .post-gallery-grid{
+    margin-bottom:2em;
+
+    .grid-sizer, .grid-item{
+      width:calc(100% - 6px);
+      margin:0 3px 6px;
+    }
+
+    .grid-item:last-child{margin-bottom:0;}
+
+    @media only screen and (min-width:40em){
+      .grid-sizer, .grid-item{
+        width:calc((100% / 2) - 6px);
+      }
+    }
+
+    @media only screen and (min-width:60em){
+      .grid-sizer, .grid-item{width:calc((100% / 3) - 6px);}
+    }
+
+    .grid-image{display:block; height:auto; width:100%;}
+
+    .grid-link{border:none; display:block; line-height:0;}
+  }
+} /* .single-post */
