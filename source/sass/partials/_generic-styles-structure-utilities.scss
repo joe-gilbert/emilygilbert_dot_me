@@ -63,6 +63,13 @@ em {font-style: italic;}
 /**********************************************/
 a.decorationless{border-bottom:none;}
 
+.columnized-copy{
+  @media screen and (min-width:60em){
+    @include text-columns(2);
+    @include column-gap(4em);
+  }
+}
+
 .section-title{
   font-size:2em;
   font-weight:$primary-font-weight;
@@ -280,6 +287,7 @@ footer{
 /**********************************************/
 .pagination{
   font-size:0.8em;
+  margin-bottom:2em;
   text-align:center;
 
   .page-numbers{
@@ -288,7 +296,7 @@ footer{
     padding:0.7em 1em;
 
     &:hover, &.current{background:$background;}
-    &.next, &.prev{font-size:1.5em; padding:0.35em 0.5em}
+    &.next, &.prev{font-size:1.2em; padding:0.5em 1em}
   }
 
   .screen-reader-text{margin-bottom:0.3em;}
@@ -304,7 +312,7 @@ footer{
 .container{
   margin: 0 auto;
   max-width: $site-max-width;
-  width:90vw;
+  width:90%;
 }
 
 .narrow-column{

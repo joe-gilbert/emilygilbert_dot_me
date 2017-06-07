@@ -37,8 +37,8 @@
 
 	<?php if ( is_home() || is_category() ): ?>
 
-		<meta name="description" content="Emily Gilbert's Photography.">
-		<meta name="keywords" content="Emily Gilbert, Photography, Portfolio, Mechanicsville, Virginia, Richmond">
+		<meta name="description" content="Emily Joy Gilbert's Photography.">
+		<meta name="keywords" content="Emily Joy Gilbert, Photography, Portfolio, Mechanicsville, Virginia, Richmond">
 
 	<?php elseif ( is_single() ): ?>
 
@@ -46,10 +46,15 @@
 
 		<?php
 			$post_tags = get_the_tags();
-			foreach($post_tags as $tag)
-				$csv_tags .= $tag->name . ',';
 
-			echo '<meta name="keywords" content="'.$csv_tags.'" />';
+			if(!empty($post_tags)):
+
+				foreach($post_tags as $tag)
+					$csv_tags .= $tag->name . ',';
+
+				echo '<meta name="keywords" content="'.$csv_tags.'" />';
+
+			endif;
 		?>
 
 	<?php endif; ?>
@@ -57,7 +62,7 @@
 
 	<?php
 		/* Pulls in the social media meta tags */
-		include('resources/includes/social-media-meta.php'); ?>
+		//include('resources/includes/social-media-meta.php'); ?>
 
 	<?php /* Google Fonts Imprt */ ?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500,900" rel="stylesheet">

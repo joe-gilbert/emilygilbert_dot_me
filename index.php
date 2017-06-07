@@ -20,20 +20,18 @@
 		<?php if( is_home() ): ?>
 
 			<?php
-				$value = get_option('custom_option_name');
+				$custom_option = get_option('custom_option_name');
 
-				if($value !== FALSE):
+				if($custom_option !== FALSE):
 			?>
 
 				<header class="engaging-recent-photo-gallery-slider">
-					<?php echo do_shortcode('[gallery ids="'. $value['gallery_image_ids'] .'"]'); ?>
+					<?php echo do_shortcode('[gallery ids="'. $custom_option['gallery_image_ids'] .'"]'); ?>
 				</header>
 
 			<?php	endif; ?>
 
 		<?php endif; ?>
-
-		<?php query_posts( 'posts_per_page=9' ); ?>
 
 		<?php if ( have_posts() ): ?>
 
@@ -50,11 +48,14 @@
 
 			</section>
 
+			<?php  /* Imports all pagination controls */
+				include 'assets/includes/pagination-controls.php'; ?>
+
 		<?php else: ?>
 
 			<h2 class="section-title">No posts were found</h2>
 
-			<p>Sorry, there aren't any recent posts. Perhaps searching will help find what you're looking for.</p>
+			<p class="center-copy">Sorry, there aren't any recent posts. Perhaps searching will help find what you're looking for.</p>
 
 			<?php get_search_form(); ?>
 

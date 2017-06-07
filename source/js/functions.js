@@ -1,11 +1,19 @@
 $(document).ready(function(){
 
 	/* Single Post Masonry Plugin */
-	$('.post-gallery-grid').masonry({
-		columnWidth: '.grid-sizer',
-		itemSelector: '.grid-item',
-		percentPosition: true
-	});
+	if( $('.post-gallery-grid').length ){
+
+		var $masonryGrid = $('.post-gallery-grid').masonry({
+			columnWidth: '.grid-sizer',
+			itemSelector: '.grid-item',
+			percentPosition: true
+		});
+
+		/* layout Masonry after each image loads */
+		$masonryGrid.imagesLoaded().progress( function() {
+			$masonryGrid.masonry('layout');
+		});
+	}
 
 	/* Homepage Gallery Slider Functionality */
 	if( $('.gallery-slider').length ){

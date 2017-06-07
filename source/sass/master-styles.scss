@@ -3,7 +3,7 @@
   Author: Joe Gilbert
   Author URI: JoeGilbert.me
   Description: This is Emily Gilbert's photography portfolio site.
-  Version: 1.0
+  Version: 1.1
 */
 
 /**
@@ -102,10 +102,13 @@
 
 .homepage{
   .engaging-recent-photo-gallery-slider{
-    margin:0 -5vw 3em;
+    height:0;
+    margin:0 -4.9vw 3em;
+    overflow:hidden;
+    padding-bottom:67%;
 
     @media only screen and (min-width:$site-max-width){
-      margin:0 calc(50% - 50vw) 5em;
+      margin-bottom:5em;
     }
 
     .gallery-slider{
@@ -148,15 +151,12 @@
     margin-bottom:3em;
   }
 
+  .contact{padding-top:2em;}
+
   .profile{
     margin-left:auto;
     margin-right:auto;
     max-width:$site-medium-width;
-
-    @media screen and (min-width:60em){
-      @include text-columns(2);
-      @include column-gap(4em);
-    }
   }
 
   .self-portrait{
@@ -195,13 +195,20 @@
 
   .post-content{
     p{margin-bottom:2em;}
+
+    img.aligncenter{
+      display:block;
+      height:auto;
+      margin:0 auto 6px;
+      width:100%;
+    }
   }
 
   .post-header{
-    margin:0 -5vw 3em;
+    margin:0 -4.9vw 3em;
 
     @media only screen and (min-width:$site-max-width){
-      margin:0 calc(50% - 50vw) 3em;
+      margin-bottom:5em;
     }
 
     .engaging-header-image{
@@ -227,7 +234,9 @@
     }
 
     @media only screen and (min-width:60em){
-      .grid-sizer, .grid-item{width:calc((100% / 3) - 6px);}
+      &.gallery-collumns-3{
+       .grid-sizer, .grid-item{width:calc((100% / 3) - 6px);}
+      }
     }
 
     .grid-image{display:block; height:auto; width:100%;}

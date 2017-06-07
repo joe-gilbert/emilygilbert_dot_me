@@ -39,7 +39,7 @@ if ( !function_exists('post_or_page_specific_class') ) {
 
 			case is_search():
 			case is_404():
-				$class = "search-lp category-lp";
+				$class = "search-lp";
 				break;
 
 			case is_single():
@@ -152,7 +152,7 @@ if ( !function_exists('custom_post_gallery_format') ) {
 
 			/* Initial gallery wrapping output */
 			$output = '
-				<section class="post-gallery-grid clear-fix">
+				<section class="post-gallery-grid gallery-columns-'. $atts['columns'] .' clear-fix">
 					<div class="grid-sizer"></div>
 			';
 
