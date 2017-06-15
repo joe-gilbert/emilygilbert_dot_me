@@ -305,7 +305,6 @@ footer{
 
 
 
-
 /**********************************************
    [ Structure ]
 /**********************************************/
@@ -315,7 +314,7 @@ footer{
   width:90%;
 }
 
-.narrow-column{
+.narrow-column, .narrow-copy-block{
   margin:0 auto;
   max-width:800px;
 }

@@ -17,6 +17,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 /*
  * Returns the string 'post-id-#' where '#' is specific to page or post
+ * as well as other custom classes depending on the page type.
 ------------------------------------------------------------------------*/
 if ( !function_exists('post_or_page_specific_class') ) {
 	function post_or_page_specific_class() {
@@ -213,6 +214,18 @@ if ( !function_exists('my_mce_before_init_insert_formats') ) {
 				'block' => 'p',
 				'classes' => 'narrow-column',
 				'wrapper' => false
+			),
+			array(
+				'title' => 'Double Spaced Narrow Text',
+				'block' => 'p',
+				'classes' => 'double-spaced narrow-column',
+				'wrapper' => false
+			),
+			array(
+				'title' => 'Post Narrow Copy Block',
+				'block' => 'section',
+				'classes' => 'narrow-copy-block',
+				'wrapper' => true
 			)
 		);
 

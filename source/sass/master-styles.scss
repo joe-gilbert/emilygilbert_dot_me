@@ -194,7 +194,13 @@
 .single-post{
 
   .post-content{
-    p{margin-bottom:2em;}
+    p{
+      margin-bottom:2em;
+      &.double-spaced{
+        margin-bottom:4em;
+        margin-top:4em;
+      }
+    }
 
     img.aligncenter{
       display:block;
@@ -202,7 +208,11 @@
       margin:0 auto 6px;
       width:100%;
     }
-  }
+
+    .section-title{
+      &.double-spaced{margin-top:2em;}
+    }
+  } /* .post-content */
 
   .post-header{
     margin:0 -4.9vw 3em;
@@ -218,24 +228,28 @@
   }
 
   .post-gallery-grid{
-    margin-bottom:2em;
+    &:last-child{margin-bottom:2em;}
 
     .grid-sizer, .grid-item{
       width:calc(100% - 6px);
       margin:0 3px 6px;
     }
 
-    .grid-item:last-child{margin-bottom:0;}
-
     @media only screen and (min-width:40em){
-      .grid-sizer, .grid-item{
-        width:calc((100% / 2) - 6px);
+      &.gallery-columns-2, &.gallery-columns-4{
+        .grid-sizer, .grid-item{width:calc((100% / 2) - 6px);}
       }
     }
 
     @media only screen and (min-width:60em){
-      &.gallery-collumns-3{
+      &.gallery-columns-3{
        .grid-sizer, .grid-item{width:calc((100% / 3) - 6px);}
+      }
+      &.gallery-columns-4{
+       .grid-sizer, .grid-item{width:calc((100% / 4) - 6px);}
+      }
+      &.gallery-columns-5{
+       .grid-sizer, .grid-item{width:calc((100% / 5) - 6px);}
       }
     }
 
