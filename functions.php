@@ -153,7 +153,7 @@ if ( !function_exists('custom_post_gallery_format') ) {
 
 			/* Initial gallery wrapping output */
 			$output = '
-				<section class="post-gallery-grid gallery-columns-'. $atts['columns'] .' clear-fix">
+				<div class="post-gallery-grid gallery-columns-'. $atts['columns'] .' clear-fix">
 					<div class="grid-sizer"></div>
 			';
 
@@ -172,7 +172,7 @@ if ( !function_exists('custom_post_gallery_format') ) {
 			}
 
 			/* Closing gallery wrapping output */
-			$output .= "</section>";
+			$output .= "</div>";
 
 		}
 
@@ -223,7 +223,7 @@ if ( !function_exists('my_mce_before_init_insert_formats') ) {
 			),
 			array(
 				'title' => 'Post Narrow Copy Block',
-				'block' => 'section',
+				'block' => 'div',
 				'classes' => 'narrow-copy-block',
 				'wrapper' => true
 			)
