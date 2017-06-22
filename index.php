@@ -26,7 +26,7 @@
 			?>
 
 				<header class="engaging-recent-photo-gallery-slider">
-					<?php echo do_shortcode('[gallery ids="'. $custom_option['gallery_image_ids'] .'"]'); ?>
+					<?php echo do_shortcode('[gallery size="full" ids="'. $custom_option['gallery_image_ids'] .'"]'); ?>
 				</header>
 
 			<?php	endif; ?>
