@@ -9,17 +9,19 @@ $bold-font-weight: 500;
 
 
 /* Colors */
+$primary-color: #BAD7D4;
+$secondary-color: #EE927D;
+
 $background: #F6F7F9;
 $background-gray: #D3D3D3;
 
 $body-copy-black: #222222;
 $body-copy-gray: #AAAAAA;
 
-$body-emphasis-color: #BCDAD6;
+$body-emphasis-color: $primary-color;
 
-$body-link-color: $body-emphasis-color;
+$body-link-color: $primary-color;
 $body-link-hover-color: #A6BFBC;
-
 
 /* Widths */
 $site-max-width: 1600px;

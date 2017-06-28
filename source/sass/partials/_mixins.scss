@@ -1,3 +1,8 @@
+@mixin background-opacity($color, $opacity: 0.8) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
@@ -41,6 +46,14 @@
 		 -moz-transition: $duration;
 			-ms-transition: $duration;
 					transition: $duration ease-in-out;
+}
+
+@mixin transform-rotate($degree) {
+	-webkit-transform: rotate($degree);
+			 -o-transform: rotate($degree);
+		 -moz-transform: rotate($degree);
+			-ms-transform: rotate($degree);
+					transform: rotate($degree);
 }
 
 @mixin transform-translateY($height) {
