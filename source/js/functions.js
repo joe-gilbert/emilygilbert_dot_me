@@ -21,7 +21,7 @@ function removeInlineStyles(styledObject){
 
 	objectToFix.removeAttr('style');
 
-} /* END function makeObjectFixedPositioned */
+} /* END function removeInlineStyles */
 
 
 /*********************************************

@@ -30,7 +30,7 @@
 
 				</section>
 
-				<?php  /* Imports all pagination controls */
+				<?php  /* Imports post formatting */
 					include 'assets/includes/pagination-controls.php'; ?>
 
 			</section> <?php /* END .found-post-container */ ?>

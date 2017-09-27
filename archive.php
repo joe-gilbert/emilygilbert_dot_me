@@ -29,14 +29,14 @@
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php  /* Imports all pagination controls */
+						<?php /* Imports post formatting */
 							include 'assets/includes/loop-post-format.php'; ?>
 
 					<?php endwhile; ?>
 
 				</section>
 
-			<?php  /* Imports all pagination controls */
+			<?php /* Imports all pagination controls */
 				include 'assets/includes/pagination-controls.php'; ?>
 
 			</section> <?php /* END .found-post-container */ ?>

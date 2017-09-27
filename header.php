@@ -65,13 +65,13 @@
 		//include('resources/includes/social-media-meta.php'); ?>
 
 	<?php /* Google Fonts Imprt */ ?>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500,900">
+
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory') ?>/assets/images/icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo bloginfo('template_directory') ?>/assets/images/icons/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_directory') ?>/assets/images/icons/favicon-16x16.png">
-
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo bloginfo('template_directory') ?>/assets/js/html5shiv.min.js"></script>
