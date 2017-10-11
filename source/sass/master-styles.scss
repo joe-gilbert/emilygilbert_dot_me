@@ -20,14 +20,11 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 
-
 /* 02 - Normalize */
 @import 'partials/normalize';
 
-
 /* 03 - Generic Styles, Structure & Utilities */
 @import 'partials/generic-styles-structure-utilities';
-
 
 /* 04 - Page Specific Styles */
 .category-lp, .error-404-lp, .homepage, .search-results-lp{
