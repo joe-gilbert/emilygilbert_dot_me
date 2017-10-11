@@ -40,9 +40,9 @@ $(document).ready(function(){
 
 		/* Make the hamburger menu control fixed position to prevent jump when the scroll bar is visible. */
 		if( $('.active-navi').length ){
-			makeObjectFixedPositioned('.hamburger-menu-control');
+//			makeObjectFixedPositioned('.hamburger-menu-control');
 		}else{
-			removeInlineStyles('.hamburger-menu-control');
+//			removeInlineStyles('.hamburger-menu-control');
 		}
 
 		/* Prevent window scrolling */

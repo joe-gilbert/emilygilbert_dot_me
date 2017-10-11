@@ -48,6 +48,13 @@
 					transition: $duration ease-in-out;
 }
 
+@mixin custom-transition($properties) {
+	transition-property: $properties;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(.02,.58,.06,1);
+}
+
+
 @mixin transform-rotate($degree) {
 	-webkit-transform: rotate($degree);
 			 -o-transform: rotate($degree);

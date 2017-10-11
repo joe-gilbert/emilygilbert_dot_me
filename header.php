@@ -88,23 +88,17 @@
 		<header class="sitewide-header">
 			<h1><a href="/" class="site-logo decorationless"><img src="<?php echo bloginfo('template_directory') ?>/assets/images/logos/emily-joy-gilbert-600x189.png" alt="Emily Joy Gilbert"></a></h1>
 			<nav>
-				<a href="#" class="hamburger-menu-control">
-					<div class="hamburger-container">
-						<span class="hamburger-bar hamburger-bar-top"></span>
-						<span class="hamburger-bar hamburger-bar-mid"></span>
-						<span class="hamburger-bar hamburger-bar-btm"></span>
-					</div>
+				<a href="#" class="hamburger-menu-control decorationless">
+					<span class="hamburger"></span>
 				</a>
 
-				<div class="navi-elements-container">
-					<ul class="navi-elements">
-						<li><a href="/">Home</a></li>
-						<li><a href="/about/">About</a></li>
-						<li><a href="/category/personal/">Personal</a></li>
-						<li><a href="/category/portraits/">Portraits</a></li>
-						<li><a href="/about/">Contact</a></li>
-						<li><a href="/pricing">Pricing</a></li>
-					</ul>
-				</div>
+				<ul class="navi-elements">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/">About</a></li>
+					<li><a href="/category/personal/">Personal</a></li>
+					<li><a href="/category/portraits/">Portraits</a></li>
+					<li><a href="/about/">Contact</a></li>
+					<li><a href="/pricing">Pricing</a></li>
+				</ul>
 			</nav>
 		</header>
