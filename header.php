@@ -95,10 +95,9 @@
 				<ul class="navi-elements">
 					<li><a href="/">Home</a></li>
 					<li><a href="/about/">About</a></li>
-					<li><a href="/category/personal/">Personal</a></li>
-					<li><a href="/category/portraits/">Portraits</a></li>
 					<li><a href="/about/">Contact</a></li>
-					<li><a href="/pricing">Pricing</a></li>
+					<li><a href="/frequently-asked-questions/">Pricing</a></li>
+					<li><a href="/search/">Search</a></li>
 				</ul>
 			</nav>
 		</header>

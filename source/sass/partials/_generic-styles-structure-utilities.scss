@@ -313,26 +313,41 @@ nav{
   
   // TODO: Animate transition of menu activating
   .navi-elements {
-    @include background-opacity($primary-color, 0.98);
+    @include background-opacity($primary-color, 1);
     bottom: 0;
-    display: none;
+    display: flex;
+    flex-direction: column;
     left: 0;
     list-style-type: none;
     margin: 0;
-    padding: 5rem 0 0 0;
+    overflow-y: auto;
+    opacity: 0;
+    padding: 0;
     position: fixed;
     right: 0;
     top: 0;
+    visibility: hidden;
     z-index: 40;
-    
-    li a{
-      color: #FFF;
-      display: block;
-      font-size: 3em;
-      text-align: center;
+    transition: visibility 0s 200ms, opacity 200ms linear;
 
-      &:hover{@include background-opacity(#000, 0.1);}
-    } /* li a */
+    li {
+      font-size: 4em;
+      line-height: 1.5;
+      margin-bottom: 0;
+
+      /* Vertically centers flex items. justify-content: center; cuts overflowed content; */
+      &:first-child{margin-top:auto;}
+      &:last-child{margin-bottom:auto;}
+
+      a{
+        border: none;
+        color: #FFF;
+        display: block;
+        text-align: center;
+
+        &:hover{@include background-opacity(#000, 0.1);}
+      } /* a */
+    } /* li */
 
   } /* .navi-elements */
 
@@ -363,11 +378,12 @@ nav{
     } /* END .hamburger-menu-control */
 
     .navi-elements {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 200ms linear;
     } /* .navi-elements */
 
   } /* END .active-navi */
-
 
 } /* nav */
 
