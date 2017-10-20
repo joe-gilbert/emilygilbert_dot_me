@@ -29,7 +29,7 @@
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php /* Imports post formatting */
+						<?php  /* Imports standard loop post format */
 							include 'assets/includes/loop-post-format.php'; ?>
 
 					<?php endwhile; ?>

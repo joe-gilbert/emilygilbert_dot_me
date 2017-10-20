@@ -10,11 +10,17 @@
 
 	<main class="search-results-lp">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+			$search_query = trim(get_search_query());
+		?>
+
+		<?php if ( !empty($search_query) && have_posts() ) : ?>
 
 			<section class="search-query-container center-copy">
 				<h2 class="title">Search Results</h2>
-				<p class="subtitle"><strong>You searched for:</strong> <?php echo get_search_query(); ?></p>
+				<p class="subtitle"><strong>You searched for:</strong> <?php echo $search_query; ?></p>
+
+				<?php get_search_form(); ?>
 			</section>
 
 			<section class="found-post-container">
@@ -23,7 +29,7 @@
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php  /* Imports all pagination controls */
+						<?php  /* Imports standard loop post format */
 							include 'assets/includes/loop-post-format.php'; ?>
 
 					<?php endwhile; ?>
@@ -39,10 +45,30 @@
 
 			<section class="search-query-container center-copy">
 				<h2 class="title">Nothing was found</h2>
-				<p class="subtitle">Sorry, but no results were found from your search. Perhaps try searching again?</p>
+				<p class="subtitle">Sorry, but nothing was found from your search. Perhaps try searching again?</p>
 
 				<?php get_search_form(); ?>
 			</section>
+
+			<?php query_posts( 'posts_per_page=9' ); ?>
+
+			<?php if ( have_posts() ): ?>
+
+				<section class="recent-post clear-fix">
+
+					<h2 class="section-title">Recent Shoots</h2>
+
+					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php  /* Imports standard loop post format */
+							include 'assets/includes/loop-post-format.php'; ?>
+
+					<?php endwhile; ?>
+
+				</section>
+
+			<?php endif; ?>
+
 
 		<?php endif; ?>
 

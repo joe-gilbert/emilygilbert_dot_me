@@ -4,7 +4,7 @@
 function makeObjectFixedPositioned(nonFixedObject){
 
 	var objectToFix = $(nonFixedObject),
-			objectsPosition = objectToFix.offset();
+		objectsPosition = objectToFix.offset();
 
 	objectToFix.css({
 		'position' : 'fixed',
@@ -37,13 +37,6 @@ $(document).ready(function(){
 
 		/* Toggle the class 'active-navi' on the hamburger menu's parent nav */
 		$(this).parent('nav').toggleClass('active-navi');
-
-		/* Make the hamburger menu control fixed position to prevent jump when the scroll bar is visible. */
-		if( $('.active-navi').length ){
-//			makeObjectFixedPositioned('.hamburger-menu-control');
-		}else{
-//			removeInlineStyles('.hamburger-menu-control');
-		}
 
 		/* Prevent window scrolling */
 		$('html, body').toggleClass('overlay-no-scroll');

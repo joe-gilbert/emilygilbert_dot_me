@@ -67,7 +67,7 @@
 	<?php /* Google Fonts Imprt */ ?>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500,900">
 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=<?php echo date("Ymd" , filemtime( get_stylesheet_directory() . '/style.css') ); ?>">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory') ?>/assets/images/icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo bloginfo('template_directory') ?>/assets/images/icons/favicon-96x96.png">
@@ -96,7 +96,7 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="/about/">About</a></li>
 					<li><a href="/about/">Contact</a></li>
-					<li><a href="/frequently-asked-questions/">Pricing</a></li>
+					<!-- <li><a href="/frequently-asked-questions/">Pricing</a></li> -->
 					<li><a href="/search/">Search</a></li>
 				</ul>
 			</nav>

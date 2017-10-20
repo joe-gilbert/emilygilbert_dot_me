@@ -13,7 +13,7 @@
 
 		<section class="search-query-container center-copy">
 			<h2 class="title">Sorry, that page wasn't found.</h2>
-			<p class="subtitle"><a href="/">Browse all posts here</a> or search for a specific post below.</p>
+			<p class="subtitle"><a href="/">Browse all shoots here</a> or search for a specific shoot below.</p>
 
 			<?php get_search_form(); ?>
 		</section> <?php /* END .inner-container .search-container */ ?>
